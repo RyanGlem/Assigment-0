@@ -4,7 +4,23 @@ class MySolution {
   }
 
   binarySearch(nums, target) {
-    // Insert code here;
+
+    var mid = Math.floor (nums.length / 2);
+
+    if (nums.length <= 1 && nums[0] != target) {
+
+      return false;
+    }
+
+    if (target == nums[mid]) {
+      return true;
+    } else if (nums[mid] > target) {
+
+      return this.binarySearch(nums.slice (0, mid), target);
+    } else if (nums [mid] < target) {
+
+      return this.binarySearch (nums.slice (mid), target);
+    }
   }
 }
 
