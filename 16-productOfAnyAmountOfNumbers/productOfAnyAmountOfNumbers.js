@@ -1,5 +1,15 @@
 function productOfAnyAmountOfNumbers(...args) {
-  // Insert code here;
+
+    var nums = [...args];
+    var x = 1;
+
+    for (i = 0; i <= nums.length - 1; i++) {
+
+        x *= nums[i];
+    }
+
+    return (x);
+  
 }
 
 // Do not edit this line;

@@ -1,7 +1,16 @@
 class MySolution {
-  countDownSum(num) {
-    // Insert code here;
-  }
+    countDownSum(num) {
+
+        var decrement = num - 1;
+        if (decrement > 0) {
+
+            num += this.countDownSum(decrement);
+        }
+
+        return (num);
+
+    }
+
 }
 
 // Do not edit this line;
